@@ -4,12 +4,42 @@ require "mail"
 require "dotenv/load"
 
 set :public_folder, __dir__
-set :static, true
+set :static, false
 set :bind, "0.0.0.0"
 set :port, ENV.fetch("PORT", 4567)
 
+before do
+  headers "Cache-Control" => "no-store"
+end
+
 get "/" do
   send_file File.join(settings.public_folder, "index.html")
+end
+
+get "/:arquivo" do
+  arquivos = %w[
+    style.css
+    loader-style.css
+    animations.css
+    contact.css
+    script.js
+  ]
+
+  halt 404 unless arquivos.include?(params[:arquivo])
+
+  send_file File.join(settings.public_folder, params[:arquivo])
+end
+
+get "/assets/:arquivo" do
+  imagens = %w[
+    foto-vitor.jpg
+    farmacerta.png
+    site-namorados.png
+  ]
+
+  halt 404 unless imagens.include?(params[:arquivo])
+
+  send_file File.join(settings.public_folder, "assets", params[:arquivo])
 end
 
 post "/contato" do

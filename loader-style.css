@@ -1,0 +1,145 @@
+.loader {
+  display: grid;
+  place-items: center;
+  background: rgba(246, 244, 249, 0.42);
+  -webkit-backdrop-filter: blur(20px) saturate(0.8);
+  backdrop-filter: blur(20px) saturate(0.8);
+  overflow: hidden;
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
+}
+
+.loader.done {
+  opacity: 0;
+  visibility: hidden;
+  transform: none;
+}
+
+.loader-glow {
+  position: absolute;
+  width: 42vw;
+  height: 90vh;
+  opacity: 0.18;
+  filter: blur(90px);
+}
+
+.glow-left {
+  top: -18vh;
+  left: -16vw;
+  background: #b8aadf;
+}
+
+.glow-right {
+  right: -15vw;
+  bottom: -25vh;
+  background: #b8d5c6;
+}
+
+.loader-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: loader-exit 0.55s ease 2.85s forwards;
+}
+
+.loader-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.loader .loader-icons span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(183, 160, 239, 0.26);
+  border-radius: 50%;
+  background: rgba(118, 82, 190, 0.13);
+  box-shadow: 0 0 22px rgba(135, 91, 224, 0.28);
+  color: #3f3a4f;
+  font:
+    600 0.83rem "Space Grotesk",
+    sans-serif;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: loader-reveal 0.55s ease forwards;
+}
+
+.loader .loader-icons span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.loader .loader-icons span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loader-content h1 {
+  margin: 0;
+  font:
+    700 clamp(2.15rem, 4vw, 4.1rem) / 1.08 "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.045em;
+  color: #202026;
+}
+
+.loader-content h1 span,
+.loader-content h1 strong {
+  display: block;
+  font: inherit;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(10px);
+  animation: title-reveal 0.75s ease forwards;
+}
+
+.loader-content h1 span {
+  animation-delay: 0.45s;
+}
+.loader-content h1 strong {
+  color: #887dac;
+  animation-delay: 0.75s;
+}
+
+.loader-content p {
+  margin: 30px 0 0;
+  color: #5f5874;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  animation: loader-reveal 0.5s ease 1.15s forwards;
+}
+
+@keyframes loader-reveal {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes title-reveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@keyframes loader-exit {
+  to {
+    opacity: 0;
+    filter: blur(12px);
+    transform: scale(0.96);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .loader-content h1 {
+    font-size: 2.25rem;
+  }
+  .loader-glow {
+    width: 75vw;
+  }
+}

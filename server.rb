@@ -1,4 +1,12 @@
 require "sinatra"
+set :bind, '0.0.0.0'
+set :port, ENV.fetch('PORT', 4567)
+
+set :host_authorization, {
+  permitted_hosts: [
+    'web-production-d4805b.up.railway.app'
+  ]
+}
 require "json"
 require "mail"
 require "dotenv/load"

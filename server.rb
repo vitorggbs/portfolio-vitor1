@@ -1,9 +1,7 @@
 require "sinatra"
-set :bind, '0.0.0.0'
-set :port, ENV.fetch('PORT', 4567)
-
 set :host_authorization, {
   permitted_hosts: [
+    'vitorgabriel.up.railway.app',
     'web-production-d4805b.up.railway.app'
   ]
 }

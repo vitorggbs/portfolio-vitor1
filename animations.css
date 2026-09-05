@@ -319,22 +319,23 @@
 
 body {
   background-color: #fbfafc;
-  background-image: radial-gradient(rgba(32, 32, 38, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(91, 73, 135, 0.2) 1.5px, transparent 1.5px);
   background-size: 28px 28px;
 }
 
 .hero {
   background:
-    radial-gradient(circle at 5% 35%, rgba(244, 213, 198, 0.75) 0 72px, transparent 74px),
-    radial-gradient(circle at 96% 75%, rgba(217, 238, 228, 0.8) 0 95px, transparent 97px);
+    radial-gradient(circle at 5% 35%, #f0ad8d 0 76px, transparent 78px),
+    radial-gradient(circle at 96% 75%, #9fd7bc 0 105px, transparent 107px),
+    linear-gradient(160deg, transparent 0 75%, rgba(179, 160, 229, 0.32) 75% 84%, transparent 84%);
 }
 
 .hero-stage {
   background:
-    radial-gradient(circle at 91% 17%, var(--yellow) 0 9px, transparent 10px),
-    radial-gradient(circle at 88% 22%, var(--peach) 0 5px, transparent 6px),
-    linear-gradient(135deg, rgba(220, 212, 247, 0.35), transparent 38%),
-    repeating-linear-gradient(90deg, transparent 0 47px, rgba(32, 32, 38, 0.035) 48px),
+    radial-gradient(circle at 91% 17%, #e8c84e 0 11px, transparent 12px),
+    radial-gradient(circle at 88% 22%, #e9906d 0 7px, transparent 8px),
+    linear-gradient(135deg, rgba(177, 157, 231, 0.5), transparent 40%),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(80, 61, 119, 0.1) 48px),
     #fff;
 }
 
@@ -342,6 +343,13 @@ body {
 .skills {
   position: relative;
   overflow: hidden;
+}
+
+.about {
+  background:
+    radial-gradient(circle at 8% 82%, rgba(238, 170, 136, 0.5) 0 85px, transparent 87px),
+    linear-gradient(25deg, transparent 0 84%, rgba(158, 210, 184, 0.45) 84% 91%, transparent 91%),
+    #f8f5fb;
 }
 
 .about::before {
@@ -356,18 +364,18 @@ body {
     0 0 0 26px var(--lavender),
     0 0 0 27px rgba(32, 32, 38, 0.3);
   content: "";
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .about::after {
   position: absolute;
   bottom: 70px;
   left: 4%;
-  color: #b4a9d0;
+  color: #8069bd;
   content: "✦";
   font-size: 5rem;
   transform: rotate(12deg);
-  opacity: 0.55;
+  opacity: 0.9;
 }
 
 .about > .container,
@@ -378,7 +386,8 @@ body {
 
 .skills {
   background:
-    linear-gradient(115deg, transparent 0 78%, rgba(244, 213, 198, 0.35) 78% 88%, transparent 88%),
+    radial-gradient(circle at 92% 18%, rgba(234, 184, 90, 0.55) 0 48px, transparent 50px),
+    linear-gradient(115deg, transparent 0 76%, rgba(235, 156, 120, 0.55) 76% 88%, transparent 88%),
     #fff;
 }
 
@@ -390,29 +399,51 @@ body {
   height: 150px;
   border: 1px solid rgba(32, 32, 38, 0.35);
   border-radius: 35% 65% 55% 45%;
-  background: var(--mint);
+  background: #8fd0b0;
   content: "";
   transform: rotate(28deg);
-  opacity: 0.65;
+  opacity: 1;
 }
 
 .skills::after {
   position: absolute;
   right: 3%;
   bottom: 55px;
-  color: #c9bedf;
+  color: #8c73c7;
   content: "{ }";
   font: 700 6rem "Space Grotesk", sans-serif;
   letter-spacing: -0.18em;
   transform: rotate(-8deg);
-  opacity: 0.35;
+  opacity: 0.72;
+}
+
+.projects {
+  background:
+    radial-gradient(circle at 88% 10%, rgba(233, 145, 177, 0.45) 0 78px, transparent 80px),
+    radial-gradient(circle at 8% 92%, rgba(117, 190, 156, 0.5) 0 95px, transparent 97px),
+    repeating-linear-gradient(135deg, transparent 0 55px, rgba(116, 91, 174, 0.09) 56px 57px),
+    #f4f0f8;
+}
+
+.contact {
+  background:
+    radial-gradient(circle at 12% 25%, rgba(232, 193, 76, 0.22) 0 90px, transparent 92px),
+    radial-gradient(circle at 90% 78%, rgba(218, 128, 163, 0.25) 0 125px, transparent 127px),
+    linear-gradient(120deg, transparent 0 46%, rgba(255, 255, 255, 0.055) 46% 47%, transparent 47% 100%),
+    var(--ink);
+}
+
+.contact-star {
+  text-shadow:
+    38px 20px 0 #db8eaa,
+    -42px 35px 0 #78bc9c;
 }
 
 @media (max-width: 767.98px) {
   .hero {
     background:
-      radial-gradient(circle at 0 28%, rgba(244, 213, 198, 0.6) 0 45px, transparent 47px),
-      radial-gradient(circle at 100% 82%, rgba(217, 238, 228, 0.65) 0 55px, transparent 57px);
+      radial-gradient(circle at 0 28%, #f0ad8d 0 45px, transparent 47px),
+      radial-gradient(circle at 100% 82%, #9fd7bc 0 58px, transparent 60px);
   }
 
   .about::before {

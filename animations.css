@@ -317,6 +317,116 @@
   }
 }
 
+body {
+  background-color: #fbfafc;
+  background-image: radial-gradient(rgba(32, 32, 38, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 5% 35%, rgba(244, 213, 198, 0.75) 0 72px, transparent 74px),
+    radial-gradient(circle at 96% 75%, rgba(217, 238, 228, 0.8) 0 95px, transparent 97px);
+}
+
+.hero-stage {
+  background:
+    radial-gradient(circle at 91% 17%, var(--yellow) 0 9px, transparent 10px),
+    radial-gradient(circle at 88% 22%, var(--peach) 0 5px, transparent 6px),
+    linear-gradient(135deg, rgba(220, 212, 247, 0.35), transparent 38%),
+    repeating-linear-gradient(90deg, transparent 0 47px, rgba(32, 32, 38, 0.035) 48px),
+    #fff;
+}
+
+.about,
+.skills {
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  position: absolute;
+  top: 95px;
+  right: -75px;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(32, 32, 38, 0.45);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 26px var(--lavender),
+    0 0 0 27px rgba(32, 32, 38, 0.3);
+  content: "";
+  opacity: 0.6;
+}
+
+.about::after {
+  position: absolute;
+  bottom: 70px;
+  left: 4%;
+  color: #b4a9d0;
+  content: "✦";
+  font-size: 5rem;
+  transform: rotate(12deg);
+  opacity: 0.55;
+}
+
+.about > .container,
+.skills > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skills {
+  background:
+    linear-gradient(115deg, transparent 0 78%, rgba(244, 213, 198, 0.35) 78% 88%, transparent 88%),
+    #fff;
+}
+
+.skills::before {
+  position: absolute;
+  top: 120px;
+  left: -55px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(32, 32, 38, 0.35);
+  border-radius: 35% 65% 55% 45%;
+  background: var(--mint);
+  content: "";
+  transform: rotate(28deg);
+  opacity: 0.65;
+}
+
+.skills::after {
+  position: absolute;
+  right: 3%;
+  bottom: 55px;
+  color: #c9bedf;
+  content: "{ }";
+  font: 700 6rem "Space Grotesk", sans-serif;
+  letter-spacing: -0.18em;
+  transform: rotate(-8deg);
+  opacity: 0.35;
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    background:
+      radial-gradient(circle at 0 28%, rgba(244, 213, 198, 0.6) 0 45px, transparent 47px),
+      radial-gradient(circle at 100% 82%, rgba(217, 238, 228, 0.65) 0 55px, transparent 57px);
+  }
+
+  .about::before {
+    width: 120px;
+    height: 120px;
+    right: -65px;
+  }
+
+  .about::after,
+  .skills::after {
+    font-size: 3rem;
+  }
+}
+
 @keyframes yellow-bar {
   from {
     background-position: 100% 0;

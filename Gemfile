@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "sinatra", "~> 4.2"
-gem "puma", "~> 6.0"
+gem "rackup"
+gem "puma"
 gem "resend"
 gem "dotenv"

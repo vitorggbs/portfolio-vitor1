@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="style.css?v=2" />
     <link rel="stylesheet" href="loader-style.css?v=2" />
     <link rel="stylesheet" href="animations.css?v=2" />
-    <link rel="stylesheet" href="contact.css?v=2" />
   </head>
   <body>
     <div class="loader" id="loader">
@@ -169,6 +168,7 @@
               <h3>BANCO DE DADOS</h3>
               <div class="skill-list">
                 <span class="skill sky"><i class="devicon-mysql-original colored"></i>MySQL</span>
+                <span class="skill mint"><i class="devicon-sqlite-plain colored"></i>SQLite</span>
               </div>
             </div>
             <div class="skill-group tools-group">
@@ -186,7 +186,7 @@
         </div>
       </section>
       <section class="projects section-space" id="projetos">
-        <div class="projects-grid-detail detail-a">PROJECTS / 02</div>
+        <div class="projects-grid-detail detail-a">PROJECTS / 03</div>
         <div class="projects-grid-detail detail-b">✦ SELECTED WORK</div>
         <div class="container">
           <div class="section-kicker">
@@ -199,7 +199,7 @@
             <article class="project-vertical project-lavender">
               <div class="project-copy">
                 <div class="project-meta">
-                  <span>01 / 02</span><span>SISTEMA WEB</span>
+                  <span>01 / 03</span><span>SISTEMA WEB</span>
                 </div>
                 <h3>FarmaCerta</h3>
                 <p>
@@ -210,7 +210,7 @@
               <a
                 class="project-image"
                 href="https://github.com/vitorggbs/farmacia"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 aria-label="Abrir FarmaCerta"
                 ><img
                   src="assets/farmacerta.png?v=2"
@@ -228,7 +228,7 @@
             <article class="project-vertical project-peach">
               <div class="project-copy">
                 <div class="project-meta">
-                  <span>02 / 02</span><span>EXPERIÊNCIA WEB</span>
+                  <span>02 / 03</span><span>EXPERIÊNCIA WEB</span>
                 </div>
                 <h3>Site dos Namorados</h3>
                 <p>
@@ -239,7 +239,7 @@
               <a
                 class="project-image"
                 href="https://github.com/vitorggbs/sitenamorados"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 aria-label="Abrir Site dos Namorados"
                 ><img
                   src="assets/site-namorados.png?v=2"
@@ -253,6 +253,21 @@
                 </div>
               </div>
             </article>
+            <article class="project-vertical project-mint project-contas">
+              <div class="project-copy">
+                <div class="project-meta"><span>03 / 03</span><span>APLICAÇÃO DESKTOP</span></div>
+                <h3>Contas em Dia</h3>
+                <p>Programa de controle de contas a pagar e a receber, com registro de pagamentos e relatórios mensais para pequenos negócios.</p>
+              </div>
+              <a class="project-image" href="https://github.com/vitorggbs/contas-em-dia" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositório do Contas em Dia">
+                <img src="assets/contas-em-dia.png" alt="Interface do Contas em Dia com contas, contatos e relatório mensal" loading="lazy" />
+                <span>ABRIR PROJETO ↗</span>
+              </a>
+              <div class="project-footer">
+                <strong>TECNOLOGIAS</strong>
+                <div class="tags"><span>Python</span><span>Tkinter</span><span>SQLite</span><span>MVP</span></div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -261,15 +276,8 @@
           <p>CONTATO</p>
           <h2>MEIOS DE<br /><em>CONTATO.</em></h2>
           <div class="contact-links">
-            <button
-              class="contact-form-button"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#contactModal"
-            >
-              ENVIAR MENSAGEM ↗</button
-            ><a href="mailto:vitor.figueiredo.136@ufrn.edu.br">E-MAIL ↗</a
-            ><a href="https://github.com/vitorggbs" target="_blank"
+<a href="mailto:vitor.figueiredo.136@ufrn.edu.br">E-MAIL ↗</a
+            ><a href="https://github.com/vitorggbs" target="_blank" rel="noopener noreferrer"
               >GITHUB ↗</a
             >
           </div>
@@ -277,109 +285,12 @@
       </section>
     </main>
 
-    <div
-      class="modal fade contact-modal"
-      id="contactModal"
-      tabindex="-1"
-      aria-labelledby="contactModalTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div>
-              <span class="modal-number">04 / CONTATO</span>
-              <h2 id="contactModalTitle">FALE COMIGO.</h2>
-            </div>
-            <button
-              type="button"
-              class="modal-close"
-              data-bs-dismiss="modal"
-              aria-label="Fechar"
-            >
-              ×
-            </button>
-          </div>
-          <form id="contactForm">
-            <div class="modal-body">
-              <div class="row g-3">
-                <div class="col-12">
-                  <label for="contactName">Nome</label
-                  ><input
-                    id="contactName"
-                    name="nome"
-                    type="text"
-                    maxlength="80"
-                    required
-                    placeholder="Como você se chama?"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="contactPhone">Número</label
-                  ><input
-                    id="contactPhone"
-                    name="numero"
-                    type="tel"
-                    maxlength="20"
-                    required
-                    placeholder="(00) 00000-0000"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="contactEmail">E-mail</label
-                  ><input
-                    id="contactEmail"
-                    name="email"
-                    type="email"
-                    maxlength="120"
-                    required
-                    placeholder="voce@email.com"
-                  />
-                </div>
-                <div class="col-12">
-                  <label for="contactReason">Motivo do contato</label
-                  ><textarea
-                    id="contactReason"
-                    name="motivo"
-                    rows="5"
-                    maxlength="1500"
-                    required
-                    placeholder="Escreva sua mensagem..."
-                  ></textarea>
-                </div>
-                <div class="contact-trap" aria-hidden="true">
-                  <label for="contactWebsite">Site</label
-                  ><input
-                    id="contactWebsite"
-                    name="website"
-                    type="text"
-                    tabindex="-1"
-                    autocomplete="off"
-                  />
-                </div>
-              </div>
-              <p
-                class="form-status"
-                id="formStatus"
-                role="status"
-                aria-live="polite"
-              ></p>
-            </div>
-            <div class="modal-footer">
-              <button class="send-button" id="sendButton" type="submit">
-                ENVIAR CONTATO <span>↗</span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <footer>
       <div
         class="container d-flex flex-column flex-md-row justify-content-between gap-2"
       >
         <span>VITOR GABRIEL © 2026</span
-        ><a href="https://github.com/vitorggbs" target="_blank">GITHUB ↗</a>
+        ><a href="https://github.com/vitorggbs" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,25 +1,18 @@
-# Portfólio Vitor Gabriel
+# Portfólio — Vitor Gabriel
 
-Portfólio pessoal feito com HTML, CSS, Bootstrap, JavaScript e Ruby.
+Meu portfólio com apresentação, tecnologias e projetos. Feito com HTML, CSS, JavaScript e Bootstrap.
 
-## Arquivos principais
+## GitHub Pages
 
-- `index.html`: conteúdo do site.
-- `style.css`: estilo principal.
-- `animations.css`: detalhes visuais e animações.
-- `loader-style.css`: tela de carregamento.
-- `contact.css`: formulário de contato.
-- `script.js`: animações e envio do formulário.
-- `server.rb`: servidor Ruby e envio do e-mail.
+1. Coloque os arquivos desta pasta na raiz do repositório, incluindo `index.html` e `.nojekyll`.
+2. Em **Settings → Pages**, escolha **Deploy from a branch**.
+3. Selecione a branch **main**, a pasta **/ (root)** e salve.
+4. Aguarde a publicação e abra o endereço exibido pelo GitHub.
 
-## Como executar
+Para visualizar localmente, abra `index.html` no navegador.
 
-1. Instale o Ruby.
-2. Abra o terminal dentro da pasta do projeto.
-3. Execute `bundle install`.
-4. Faça uma cópia de `.env.example` com o nome `.env`.
-5. Preencha os dados do seu e-mail no `.env`.
-6. Execute `bundle exec ruby server.rb`.
-7. Abra `http://localhost:4567` no navegador.
+## Projetos
 
-Nunca envie o arquivo `.env` para o GitHub.
+- [FarmaCerta](https://github.com/vitorggbs/farmacia)
+- [Site dos Namorados](https://github.com/vitorggbs/sitenamorados)
+- [Contas em Dia](https://github.com/vitorggbs/contas-em-dia)

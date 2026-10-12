@@ -850,3 +850,6 @@ body {
     justify-content: flex-start;
   }
 }
+
+.project-contas .project-image { background: #eee; }
+.project-contas .project-image img { object-fit: contain; }
